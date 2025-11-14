@@ -9,7 +9,7 @@ import distance
 import re
 from bs4 import BeautifulSoup
 
-cv = pickle.load(open(r"C:\Users\DELL\OneDrive\Desktop\A-doc\NLP\internship-jss\cv.pkl", "rb"))
+cv = pickle.load(open("cv.pkl", "rb"))
 
 nltk.download('stopwords')
 
@@ -197,7 +197,7 @@ def test_fetch_token_features(q1,q2):
     
     SAFE_DIV = 0.0001 
 
-    STOP_WORDS = pickle.load(open(r'C:\Users\DELL\OneDrive\Desktop\A-doc\NLP\internship-jss\stopwords.pkl','rb'))
+    STOP_WORDS = pickle.load(open("stopwords.pkl", "rb"))
     
     token_features = [0.0]*8
     
@@ -324,3 +324,4 @@ def query_point_creator(q1,q2):
     
 
     return np.hstack((np.array(input_query).reshape(1,22),q1_bow,q2_bow))
+
