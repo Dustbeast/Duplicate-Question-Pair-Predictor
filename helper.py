@@ -1,8 +1,6 @@
 import nltk
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 import pickle
 from fuzzywuzzy import fuzz
 import re
@@ -324,4 +322,5 @@ def query_point_creator(q1,q2):
     
     
     
+
     return np.hstack((np.array(input_query).reshape(1,22),q1_bow,q2_bow))
